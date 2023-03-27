@@ -4894,6 +4894,7 @@ textarea.form-control-lg {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
+  background : #5F00FF;
 }
 .badge:empty {
   display: none;
