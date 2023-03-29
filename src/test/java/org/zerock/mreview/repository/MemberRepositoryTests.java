@@ -7,7 +7,6 @@ import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 import org.zerock.mreview.entity.Member;
 
-import java.util.List;
 import java.util.stream.IntStream;
 
 @SpringBootTest
@@ -22,22 +21,33 @@ public class MemberRepositoryTests {
 
     @Test
     public void insertMembers() {
+
         IntStream.rangeClosed(1,100).forEach(i -> {
             Member member = Member.builder()
-                    .email("r" + i + "@zero.org")
+                    .email("r"+i +"@zerock.org")
                     .pw("1111")
-                    .nickname("reviewer" + i).build();
+                    .nickname("reviewer"+i).build();
             memberRepository.save(member);
         });
     }
+
     @Commit
     @Transactional
     @Test
     public void testDeleteMember() {
-        Long mid = 1L; // Member의 mid
+
+        Long mid = 1L; //Member의 mid
+
         Member member = Member.builder().mid(mid).build();
 
-        memberRepository.deleteById(mid);
+        //기존
+        //memberRepository.deleteById(mid);
+        //reviewRepository.deleteByMember(member);
+
+        //순서 주의
         reviewRepository.deleteByMember(member);
+        memberRepository.deleteById(mid);
     }
+
+
 }
