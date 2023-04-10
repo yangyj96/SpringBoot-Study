@@ -1,19 +1,3 @@
-**스프링부트_코드로배우는.pdf p124~186 2023-03-22**
-
-**스프링부트_코드로배우는.pdf p186~258 2023-03-23**
-
-**스프링부트_코드로배우는.pdf p258~329 2023-03-24**
-
-**스프링부트_코드로배우는.pdf p329~393 2023-03-27 
-
-**스프링부트_코드로배우는.pdf p393~472 2023-03-28**
-
-**스프링부트_코드로배우는.pdf p472~523 2023-03-29**
-
-**스프링부트_코드로배우는.pdf p523~560 2023-03-30**
-
----
-
 ### 오류 해결 목록
 
 ### `**compile()**` 메서드 오류 : **`implementation()`**또는 **`api()`** 메서드를 사용
@@ -137,7 +121,7 @@ basic.html에 있는 코드 list.html 최상단으로 옮기기 (안해도됨!)
 
 </aside>
 
-### p. 278  `no session` 에러
+###`no session` 에러
 
 ```jsx
 @Override
@@ -175,7 +159,7 @@ public void modify(BoardDTO boardDTO) {
 
 ---
 
-### p. 279 boardcontroller 오류
+boardcontroller 오류
 
  `boardService` 이 부분에서 오류가 났는데
 
@@ -195,7 +179,7 @@ modal.show(); 로 변경 hide도 마찬가지
 
 ---
 
-### p.405 @request.param
+@request.param
 
 ```jsx
 getFile(String fileName)을 
